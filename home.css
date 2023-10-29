@@ -1,0 +1,12 @@
+.item img{
+    width: 100%;
+    height: 500px !important;
+}
+.logo{
+    width: 50px;
+    height: 50px;
+}
+.navbar-brand{
+    margin-top: 0px;
+    padding-top: 0px;
+}

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>CAPSTONE Project</title>
+  <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/live/3.1/firebase.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="order.css">
+</head>
+
+<body>
+  <center>
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a href="index.html" class="navbar-brand">Karthik</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav">
+            <li id="li"><a class="a" onclick="faq()">FAQ</a></li>
+            <li id="li"><a class="a" onclick="contact()">CONTACT</a></li>
+            <li id="li"><a class="a" onclick="order()">ORDER</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div id="login">
+      <p style="color: red;">*Please login to order*</p>
+      <input type="text" id="logiName" placeholder="Enter your name here" style="font-size: 18px;width: 30%;">
+      <br><br>
+      <button class="btn btn-success" onclick="login()">Login</button>
+    </div>
+    <div id="orderDiv">
+      <div class="container">
+        <h1 class="text-success">Order Here</h1>
+        <div class="order bg-success" data-toggle="collapse" onclick="salad()" data-target="#salad">
+          Salads
+        </div>
+        <div id="salad" class="collapse">
+          <span id="salad_name"></span>
+        </div>
+        <div class="order bg-success" data-toggle="collapse" onclick="soup()" data-target="#soup">
+          Soups
+        </div>
+        <div id="soup" class="collapse">
+          <span id="soup_name"></span>
+        </div>
+        <div class="order bg-success" data-toggle="collapse" onclick="starters()" data-target="#starters">
+          Starters and Appetizers
+        </div>
+        <div id="starters" class="collapse">
+          <span id="starters_name"></span>
+        </div>
+        <div class="order bg-success" data-toggle="collapse" onclick="snack()" data-target="#snack">
+          Snack
+        </div>
+        <div id="snack" class="collapse">
+          <span id="snack_name"></span>
+        </div>
+        <div class="order bg-success" data-toggle="collapse" onclick="juice()" data-target="#juice">
+          Juices
+        </div>
+        <div id="juice" class="collapse">
+          <span id="juice_name"></span>
+        </div>
+        <div onclick="saveOrder()" style="width: 60%; color: white; margin-bottom: 20px;" class="btn btn-danger">SAVE ORDER</div>
+        <br>
+        <div onclick="check()" style="width: 60%; color: white; margin-bottom: 20px" class="btn btn-danger">CHECK OUT</div>
+        <br>
+      </div>
+      <div id="output">
+      </div>
+      <div id="checkout">
+        <h1>Final Order</h1>
+        <br>
+        <div id="itemList">
+          <h4 id="name"></h4>
+          <table  style="margin-bottom: 50px;" id="orderTable">
+            <thead>
+              <tr>
+                <th style="width: 80%;">Item Name</th>
+                <th>Quantity</th>
+              </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+          </table>
+
+        </div>
+      </div>
+  </center>
+  <footer style="background-color: rgb(0, 0, 0);font-size: 17px;width: 100%;text-align: center;bottom: 0px;position: fixed;line-height: 3;font-family: Arial, Helvetica, sans-serif;font-style: italic;color: rgb(43, 255, 0);">Developed By Karthikrishnan J</footer>
+  <script src="order.js"></script>
+</body>
+
+</html>

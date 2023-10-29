@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>CAPSTONE Project</title>
+  <link rel="stylesheet" href="checkOut.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/live/3.1/firebase.js"></script>
+</head>
+<body>
+    <center>
+        <h2>CHECKOUT</h2>
+        <h4>Please Enter Your Name</h4>
+        <input id = "name" type = "text" placeholder = "Enter Your Name Here">
+        <br>
+        <h4>Please Enter Your Phone Number</h4>
+        <input type = "number"  placeholder = "Your Phone Number Here">
+        <br>
+        <h3>Your Final Is <span id="final_name"></span></h3>
+        <div id="final_order"></div>
+        </center>
+        <script src="checkOut.js"></script>
+</body>
